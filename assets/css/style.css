@@ -1,0 +1,198 @@
+body{font-family: 'Roboto' !important;}
+.minHeight{min-height: 600px;}
+.leftBanner{
+	background-image: url('../images/cwrs.PNG');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	height: 520px;
+}
+
+.leftBanner-background{
+	background-image: url('../images/background.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	height: 520px;
+}
+
+.leftBanner-wordexperience{
+	background-image: url('../images/workexperience.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	height: 520px;
+}
+
+.leftBanner-education{
+	background-image: url('../images/education.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	height: 520px;
+}
+
+.leftBanner-referfriend{
+	background-image: url('../images/referfriend.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	height: 520px;
+}
+
+.marginTP100{margin-top: 100px;}
+.marginBM0{margin-bottom: 0px;}
+.spacer30{height: 30px;}
+
+
+.fb-login{
+	background-image: url('../images/social-facebook-box-blue-icon.png');width: 24px;height: 24px;background-repeat: no-repeat;background-size: 80% auto;
+}
+
+.list-group-item{
+    padding: 10px 0px 10px 10px !important;
+    margin-bottom: 0px !important;
+    border-bottom: 1px solid #ddd !important;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+#backgrounds.list-group {
+    padding-right: 0;
+    box-shadow: 3px 2px 15px rgba(0,0,0,.075);
+}
+
+.glyphicon {color: #C4C2C2;}
+
+#backgrounds li {cursor: pointer;}
+
+#backgrounds li span.glyphicon-chevron-right{
+	padding-right: 5px;
+    font-size: 10px;
+    margin-top: 8px;
+}
+
+#skillsblock ul{
+	padding: 0px;
+}
+
+#skillsblock ul li{
+	list-style: none;
+    display: inline-block;
+    padding: 2px 12px;
+    background-color: #555555;
+    color: #ffffff;
+    border-radius: 4px;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+@media (min-width: 200px) and (max-width: 962px) { 
+	.rightblock{
+		padding: 0px !important;
+	}
+
+	.rightContainer{
+		padding: 0px !important;
+	}
+
+	.leftBanner{
+		height:200px !important;
+	}
+
+	.leftBanner-background{
+		height:200px !important;
+	}
+
+	.leftBanner-wordexperience{
+		height:200px !important;
+	}
+
+	.leftBanner-education{
+		height:200px !important;
+	}
+
+	.leftBanner-referfriend{
+		height:200px !important;
+	}
+
+	.marginTP100{
+		margin-top:0px !important; 
+	}
+
+	.mobile_view{
+		padding: 20px !important;
+	}
+
+}
+
+.rightblock{
+	padding: 0px 15px 0 70px;
+}
+.rightContainer{
+	padding:100px 15px 0 70px;
+}
+
+/* Floating Labels CSS */
+
+/*input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
+ font-size: 0.75em;
+ color: #337ABD;
+ top: -2.25rem;
+ -webkit-transition: all 0.125s ease;
+ transition: all 0.125s ease;
+}
+
+.styled-input {
+  margin: 2rem 0 1rem;
+  position: relative;
+  border-bottom: 1px dotted #cccccc;
+}
+
+.styled-input label {
+  color: #999;
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  pointer-events: none;
+}
+
+.styled-input.wide { width: 100%; }
+
+input,
+textarea {
+  padding: 1rem 1rem;
+  border: 0;
+  width: 100%;
+  font-size: 1rem;
+}
+
+input ~ span,
+textarea ~ span {
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #337ABD;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: all 0.125s ease;
+  transition: all 0.125s ease;
+}
+
+input:focus,
+textarea:focus { outline: 0; }
+
+input:focus ~ span,
+textarea:focus ~ span {
+  width: 100%;
+  -webkit-transition: all 0.075s ease;
+  transition: all 0.075s ease;
+}
+
+textarea {
+  width: 100%;
+  min-height: 15em;
+}
+*/
+/* Ends */
+

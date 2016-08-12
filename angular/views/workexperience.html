@@ -1,0 +1,65 @@
+<div class="col-md-5 col-sm-12 col-xs-12 leftBanner-wordexperience img-rounded"></div>
+<div class="clearfix visible-sm"></div>
+<div class="col-md-5 col-sm-12  col-xs-12 rightblock">
+	<div class="mobile_view">
+			<h3 class="text-primary marginBM0">Work Experience</h3>
+			<small>Health goth quinoa kickstarter cornhole</small>
+			<div class="spacer30"></div>
+
+			<form name="experienceform" ng-submit="submitwork(experienceform.$valid)" novalidate>
+				<div class="form-group" ng-class="{'text-danger has-error' : (experienceform.companyname.$invalid && experienceform.$submitted) || (experienceform.companyname.$invalid && experienceform.companyname.$dirty) }">
+					<label>Company Name</label>
+					<input type="text" name="companyname" class="form-control" ng-model="formData.companyname" required>
+					<div ng-class="{'has-error':(experienceform.$submitted || experienceform.companyname.$dirty)}" ng-show="experienceform.$submitted || experienceform.companyname.$dirty">
+						<label ng-show="experienceform.companyname.$error.required">This is mandatory</label>
+					</div>
+				</div>
+				<div class="form-group" ng-class="{'text-danger has-error' : (experienceform.position.$invalid && experienceform.$submitted) || (experienceform.position.$invalid && experienceform.position.$dirty) }">
+					<label>Position</label>
+					<input type="text" name="position" class="form-control" ng-model="formData.position" required>
+					<div ng-class="{'has-error':(experienceform.$submitted || experienceform.position.$dirty)}" ng-show="experienceform.$submitted || experienceform.position.$dirty">
+						<label ng-show="experienceform.position.$error.required">This is mandatory</label>
+					</div>
+				</div>
+				<div class="form-group" ng-class="{'text-danger has-error' : (experienceform.timeworked.$invalid && experienceform.$submitted) || (experienceform.timeworked.$invalid && experienceform.timeworked.$dirty) }">
+					<label>Time Worked</label>
+					<input type="text" name="timeworked" class="form-control" ng-model="formData.timeworked" required>
+					<label class="help-block">June-2004 to June-2015</label>
+					<div ng-class="{'has-error':(experienceform.$submitted || experienceform.timeworked.$dirty)}" ng-show="experienceform.$submitted || experienceform.timeworked.$dirty">
+						<label ng-show="experienceform.timeworked.$error.required">This is mandatory</label>
+					</div>
+				</div>
+				<div class="form-group" ng-class="{'text-danger has-error' : (experienceform.skills.$invalid && experienceform.$submitted) || (experienceform.skills.$invalid && experienceform.skills.$dirty) }">
+					<label>Skills Used</label>
+					<select name="skills" class="form-control" required ng-model="formData.skills" ng-options="skill.name for skill in skills" ng-change="getTheSkill(formData.skills.name)"></select>
+					<div ng-class="{'has-error':(experienceform.$submitted || experienceform.skills.$dirty)}" ng-show="experienceform.$submitted || experienceform.skills.$dirty">
+						<label ng-show="experienceform.skills.$error.required">This is mandatory</label>
+					</div>
+					<div ng-show="havingskills.length != 0">
+						<hr>
+						<div class="well" id="skillsblock">
+							<ul>
+								<li ng-repeat="skill in havingskills  track by $index">{{skill}}</li>
+							</ul>
+						</div>
+					</div>
+					
+				</div>
+				<div class="form-group" ng-class="{'text-danger has-error' : (experienceform.referencename.$invalid && experienceform.$submitted) || (experienceform.referencename.$invalid && experienceform.referencename.$dirty) }">
+					<label>Name of Reference</label>
+					<input type="text" name="referencename" class="form-control" ng-model="formData.referencename" required>
+					<div ng-class="{'has-error':(experienceform.$submitted || experienceform.referencename.$dirty)}" ng-show="experienceform.$submitted || experienceform.referencename.$dirty">
+						<label ng-show="experienceform.referencename.$error.required">This is mandatory</label>
+					</div>
+				</div>
+				<div class="form-group" ng-class="{'text-danger has-error' : (experienceform.referenceemail.$invalid && experienceform.$submitted) || (experienceform.referenceemail.$invalid && experienceform.referenceemail.$dirty) }">
+					<label>Email of Reference</label>
+					<input type="email" name="referenceemail" class="form-control" ng-model="formData.referenceemail" required>
+					<div ng-class="{'has-error':(experienceform.$submitted || experienceform.referenceemail.$dirty)}" ng-show="experienceform.$submitted || experienceform.referenceemail.$dirty">
+						<label ng-show="experienceform.referenceemail.$error.required">This is mandatory</label>
+					</div>
+				</div>
+				<button class="btn btn-primary" type="submit" ng-disabled="experienceform.$invalid">Next</button>
+			</form>
+	</div>
+</div>

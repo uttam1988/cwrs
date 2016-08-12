@@ -1,0 +1,40 @@
+<style type="text/css">
+	.marginTP100{margin-top:20px !important;}
+</style>
+<div class="col-xs-12">
+	<div class="pull-left">
+		<img src="assets/images/{{user.picture}}" class="img-thumbnail img-responsive" width='200' height="150">
+	</div>
+	<div class="pull-right">
+		<p class="lead">Welcome <b>{{user.name}}</b></p>
+		<blockquote>
+		  <p>Personal Information</p>
+		  <footer>Present Location <cite title="Source Title">{{user.live}}</cite></footer>
+		  <footer>Specialization on <cite title="Source Title">{{user.specialize}}</cite></footer>
+		</blockquote>
+	</div>
+</div>
+<div class="clearfix"></div>
+<hr>
+<div class="col-xs-12">
+	<div class="col-sm-6">
+		<div class="panel panel-primary">
+		  <div class="panel-heading">Educational Qualifications</div>
+		  <div class="panel-body">
+		    Insititution <b>{{user.education.schoolname}}</b><br>
+		    Qualification <b>{{user.education.study}}</b><br>
+		    Graduated on year <b>{{user.education.graduation}}</b>
+		  </div>
+		</div>
+	</div>
+	<div class="col-sm-6">
+		<div class="panel panel-primary">
+		  <div class="panel-heading">Work Experience</div>
+		  <div class="panel-body">
+		    Company <b>{{user.workexperience.companyname}}</b><br>
+		    Position <b>{{user.workexperience.position}}</b><br>
+		    Skills <b ng-repeat="skill in user.workexperience.skills">{{skill}},</b>
+		  </div>
+		</div>
+	</div>
+</div>

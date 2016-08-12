@@ -1,0 +1,29 @@
+<div class="col-md-5 col-sm-12 col-xs-12 leftBanner img-rounded"></div>
+<div class="clearfix visible-sm"></div>
+<div class="col-md-5 col-sm-12  col-xs-12 rightContainer">
+<div class="mobile_view">
+	<h3 class="text-primary marginBM0">Login</h3>
+	<small>Health goth quinoa kickstarter cornhole</small>
+	<div class="spacer30"></div>
+	<form name="loginform" ng-submit="submit(loginform.$valid)" novalidate>
+		<div class="form-group" ng-class="{'text-danger has-error' : (loginform.email.$invalid && loginform.$submitted) || (loginform.email.$invalid && loginform.email.$dirty) }">
+			<label>Email</label>
+			<input type="email" name="email" class="form-control" ng-model="formData.email" required/>
+			<div ng-show="loginform.$submitted || loginform.email.$dirty">
+				<label ng-show="loginform.email.$error.required">Enter your email</label>
+				<label ng-show="loginform.email.$error.email">Enter a valid email</label>
+			</div>
+		</div>
+		<div class="form-group" ng-class="{'text-danger has-error' : (loginform.password.$invalid && loginform.$submitted) || (loginform.password.$invalid && loginform.password.$dirty) }">
+			<label>Password</label>
+			<input type="password" name="password" class="form-control" ng-model="formData.password" required  ng-minlength='5'/>
+			<div ng-show="loginform.$submitted || loginform.password.$dirty">
+				<label ng-show="loginform.password.$error.required">Password can't be blank</label>
+				<label ng-show="loginform.password.$error.minlength">Enter minimum 5 digits</label>
+			</div>
+		</div>
+		<button class="btn btn-primary" type="submit" ng-disabled="loginform.$invalid">Login</button>
+		<div class="text-danger">{{message}}</div>
+	</form>
+</div>
+</div>

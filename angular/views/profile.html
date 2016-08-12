@@ -1,0 +1,50 @@
+<div class="col-md-5 col-sm-12 col-xs-12 leftBanner img-rounded"></div>
+<div class="clearfix visible-sm"></div>
+<div class="col-md-5 col-sm-12  col-xs-12 rightblock">
+<div class="mobile_view">
+	<h3 class="text-primary marginBM0">Tell us about you</h3>
+	<small>Health goth quinoa kickstarter cornhole</small>
+	<div class="spacer30"></div>
+	<form name="profileform" ng-submit="submit(profileform.$valid)" novalidate>
+		<div class="form-group">
+			<img ngf-src="formData.picture" class="img-responsive  img-thumbnail" height="100" width="100">
+		</div>
+		<div class="form-group" ng-class="{'text-danger has-error' : (profileform.picture.$invalid && profileform.$submitted) || (profileform.picture.$invalid && profileform.picture.$dirty) }">
+			<label>Upload a profile photo</label>
+			<input type="file" name="file" ngf-select="" class="form-control" ng-model="formData.picture" required  ngf-accept="'image/*'"/>
+			<div ng-show="profileform.$submitted || profileform.picture.$dirty">
+				<label ng-show="profileform.picture.$error.required">Upload profile picture</label>
+			</div>
+		</div>
+		<div class="form-group" ng-class="{'text-danger has-error' : (profileform.live.$invalid && profileform.$submitted) || (profileform.live.$invalid && profileform.live.$dirty) }">
+			<label>Where do you live?</label>
+			<input type="text" name="live" class="form-control" ng-model="formData.live" required/>
+			<div ng-show="profileform.$submitted || profileform.live.$dirty">
+				<label ng-show="profileform.live.$error.required">This is mandatory</label>
+			</div>
+		</div>
+		<div class="form-group" ng-class="{'text-danger has-error' : (profileform.travel.$invalid && profileform.$submitted) || (profileform.travel.$invalid && profileform.travel.$dirty) }">
+			<label>How far are you willing to travel?</label>
+			<input type="text" name="travel" class="form-control" ng-model="formData.travel" required/>
+			<div ng-show="profileform.$submitted || profileform.travel.$dirty">
+				<label ng-show="profileform.travel.$error.required">This is mandatory</label>
+			</div>
+		</div>
+		<div class="form-group" ng-class="{'text-danger has-error' : (profileform.specialize.$invalid && profileform.$submitted) || (profileform.specialize.$invalid && profileform.specialize.$dirty) }">
+			<label>What do you specialize in?</label>
+			<input type="text" name="specialize" class="form-control" ng-model="formData.specialize" required/>
+			<div ng-show="profileform.$submitted || profileform.specialize.$dirty">
+				<label ng-show="profileform.specialize.$error.required">This is mandatory</label>
+			</div>
+		</div>
+		<div class="form-group" ng-class="{'text-danger has-error' : (profileform.rate.$invalid && profileform.$submitted) || (profileform.rate.$invalid && profileform.rate.$dirty) }">
+			<label>What is your expected rate?</label>
+			<input type="text" name="rate" class="form-control" ng-model="formData.rate" required/>
+			<div ng-show="profileform.$submitted || profileform.rate.$dirty">
+				<label ng-show="profileform.rate.$error.required">This is mandatory</label>
+			</div>
+		</div>
+		<button class="btn btn-primary" type="submit" ng-disabled="profileform.$invalid">Next</button>
+	</form>
+</div>
+</div>

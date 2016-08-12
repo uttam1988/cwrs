@@ -1,0 +1,39 @@
+<div class="col-md-5 col-sm-12 col-xs-12 leftBanner img-rounded"></div>
+<div class="clearfix visible-sm"></div>
+<div class="col-md-5 col-sm-12  col-xs-12 rightContainer">
+<div class="mobile_view">
+	<h3 class="text-primary marginBM0">Enter Acount Details</h3>
+	<small>Health goth quinoa kickstarter cornhole</small>
+	<div class="spacer30"></div>
+	<form name="signupform" ng-submit="submit(signupform.$valid)" novalidate>
+		<div class="form-group" ng-class="{'text-danger has-error' : (signupform.email.$invalid && signupform.$submitted) || (signupform.email.$invalid && signupform.email.$dirty) }">
+			<label>Email</label>
+			<input type="email" name="email" class="form-control" ng-model="formData.email" required/>
+			<div ng-show="signupform.$submitted || signupform.email.$dirty">
+				<label ng-show="signupform.email.$error.required">Enter email id</label>
+			</div>
+		</div>
+		<div class="form-group" ng-class="{'text-danger has-error' : (signupform.fname.$invalid && signupform.$submitted) || (signupform.fname.$invalid && signupform.fname.$dirty) }">
+			<label>First Name</label>
+			<input type="text" name="fname" class="form-control" ng-model="formData.fname" required/>
+			<div ng-show="signupform.$submitted || signupform.fname.$dirty">
+				<label ng-show="signupform.fname.$error.required">Enter first name</label>
+			</div>
+		</div>
+		<div class="form-group" ng-class="{'text-danger has-error' : (signupform.lname.$invalid && signupform.$submitted) || (signupform.lname.$invalid && signupform.lname.$dirty) }">
+			<label>Last Name</label>
+			<input type="text" name="lname" class="form-control" ng-model="formData.lname" required/>
+			<div ng-show="signupform.$submitted || signupform.lname.$dirty">
+				<label ng-show="signupform.lname.$error.required">Enter last name</label>
+			</div>
+		</div>
+		<div class="checkbox" ng-class="{'text-danger has-error' : (signupform.iagree.$invalid && signupform.$submitted) || (signupform.iagree.$invalid && signupform.iagree.$dirty) }">
+			<label><input type="checkbox" ng-model="formData.iagree" name="iagree" required/> I agree to the terms & conditions</label>
+			<div ng-show="signupform.$submitted || signupform.iagree.$dirty">
+				<label ng-show="signupform.iagree.$error.required">This is mandatory</label>
+			</div>
+		</div>
+		<button class="btn btn-primary" type="submit" ng-disabled="signupform.$invalid">Next</button>
+	</form>
+</div>
+</div>

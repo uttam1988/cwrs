@@ -1,0 +1,25 @@
+<div class="col-md-5 col-sm-12 col-xs-12 leftBanner img-rounded"></div>
+<div class="clearfix visible-sm"></div>
+<div class="col-md-5 col-sm-12  col-xs-12 rightContainer">
+	<div class="mobile_view">
+	<h3 class="text-primary marginBM0">Something</h3>
+	<small>Health goth quinoa kickstarter cornhole</small>
+	<div class="spacer30"></div>
+	<form name="emailform" ng-submit="submit(emailform.$valid)" novalidate>
+		<div class="form-group" ng-class="{'text-danger has-error' : (emailform.email.$invalid && emailform.$submitted) || (emailform.email.$invalid && emailform.email.$dirty) }">
+			<label>Email</label>
+			<input type="email" name="email" class="form-control" ng-model="formData.email" required>
+			<div ng-class="{'has-error':(emailform.$submitted || emailform.email.$dirty)}" ng-show="emailform.$submitted || emailform.email.$dirty">
+				<label ng-show="emailform.email.$error.required">Enter your email</label>
+				<label ng-show="emailform.email.$error.email">Enter a valid email</label>
+			</div>
+		</div>
+		<button class="btn btn-primary" type="submit" ng-disabled="emailform.$invalid">Next</button>
+	</form>
+	<div class="loginwith_social" style=" margin-top: 60px;">
+	  <div class="pull-left" style="margin-right:5px;">Login with</div> 
+	  <div class="pull-left fb-login"></div>
+	</div>
+	</div>
+</div>
+
